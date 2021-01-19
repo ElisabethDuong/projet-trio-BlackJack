@@ -1,0 +1,21 @@
+banque commence à 0
+banque pioche une carte
+score banque entre 1 et 10
+
+Joueur commence à 0
+
+jeu commence, joueur demande une carte
+score joueur entre 1 et 10
+
+banque pioche une carte 
+scoreBanque = somme carteBanque 1 + carteBanque 2
+
+joueur pioche une carte
+scoreJoueur = somme carteJoueur 1 + carteJoueur 2
+
+if scoreBanque === 21, banque win
+else if scoreBanque <= scoreJoueur, banque gagne
+else joueur gagne
+
+banque continue de piocher tant que le score <= 16
+joueur s'arrête de piocher quand il veut
