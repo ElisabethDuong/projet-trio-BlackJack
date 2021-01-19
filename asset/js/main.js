@@ -11,6 +11,7 @@ $(document).ready(function () {
         console.log(joueur)
     }
     $("#carte").click(function(){
-        $("#joueur").html(joueur);
+        draw()
+        $("#joueur").html("coucou");
     });
 })
