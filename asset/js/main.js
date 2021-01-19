@@ -1,25 +1,64 @@
 $(document).ready(function () {
     var joueur = 0;
+    var min = 1;
+    var max = 10;
     var banque = 0;
 
     function carteJoueur() {
-        var min = 1;
-        var max = 10;
         joueur = joueur + (Math.floor(Math.random() * (max - min)) + min);
         console.log(joueur)
     }
 
     function carteBanque() {
-        var min = 1;
-        var max = 10;
         banque = banque + (Math.floor(Math.random() * (max - min)) + min);
         console.log(banque)
     }
 
+
+
     $("#carte").click(function () {
+        carteBanque();
         carteJoueur();
+        $("#banque").html(banque);
         $("#joueur").html(joueur);
+        if ( joueur === 21 && banque !== 21 ){
+            $("#result").html("GG c'est win");
+        }else if( banque === 21){
+            $("#result").html("RIP t'as perdu");
+        }else if (joueur > 21){
+            $("#result").html("RIP t'as perdu");
+        }else if (banque > 21){
+            $("#result").html("GG c'est win");
+        }
+    });
+
+    $("#passer").click(function () {
+        if (banque < 18){
         carteBanque();
         $("#banque").html(banque);
+            if(banque > joueur){
+                $("#result").html("RIP t'as perdu");
+            }else {
+                $("#result").html("GG c'est win");
+            }
+        }else if ( joueur === 21 && banque !== 21 ){
+            $("#result").html("GG c'est win");
+        }else if( banque === 21){
+            $("#result").html("RIP t'as perdu");
+        }else if (joueur > 21){
+            $("#result").html("RIP t'as perdu");
+        }else if (banque > 21){
+            $("#result").html("GG c'est win");
+        }
     });
 })
+
+
+/*
+1- si le joueur ateint 21 et que la banque !== 21 ( le joueur gagne)
+2- si la banque ateint 21 et que le joueur !== 21 (la banque gagne)
+
+
+3- si le joueur > 21 (la banque gagne)
+4- si le la banque > 21 (le joueur gagne)
+*/
