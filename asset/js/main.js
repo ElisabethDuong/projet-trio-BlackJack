@@ -45,7 +45,7 @@ $(document).ready(function () {
             $("#result").html("RIP t'as perdu");
             $("#carte").addClass("d-none");
             $("#passer").addClass("d-none");
-        }else if (banque < 18){
+        }else if (banque <= 18){
         carteBanque();
         $("#banque").html(banque);
             if(banque > joueur){
