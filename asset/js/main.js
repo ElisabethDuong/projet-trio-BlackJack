@@ -14,66 +14,31 @@ $(document).ready(function () {
         console.log(banque)
     }
 
+    function joueurWin() {
 
+    }
+
+    function banqueWin() {
+
+    }
+
+    // Pour que la banque tire une nouvelle carte avec un certain délai
+    // $("#show").click(function () {
+    //     $("p").show(3000, function () {
+    //         console.log("Animation terminée !");
+    //     })
+    // });
 
     $("#carte").click(function () {
         carteBanque();
         carteJoueur();
         $("#banque").html(banque);
         $("#joueur").html(joueur);
-        if ( joueur === 21 && banque !== 21 ){
-            $("#result").html("GG c'est win");
-            $("#carte").addClass("d-none");
-            $("#passer").addClass("d-none");
-        }else if( banque === 21){
-            $("#result").html("RIP t'as perdu");
-            $("#carte").addClass("d-none");
-            $("#passer").addClass("d-none");
-        }else if (joueur > 21){
-            $("#result").html("RIP t'as perdu");
-            $("#carte").addClass("d-none");
-            $("#passer").addClass("d-none");
-        }else if (banque > 21){
-            $("#result").html("GG c'est win");
-            $("#carte").addClass("d-none");
-            $("#passer").addClass("d-none");
-        }
     });
 
     $("#passer").click(function () {
-         if(joueur < banque && banque < 21){
-            $("#result").html("RIP t'as perdu");
-            $("#carte").addClass("d-none");
-            $("#passer").addClass("d-none");
-        }else if (banque <= 18){
         carteBanque();
         $("#banque").html(banque);
-            if(banque > joueur){
-                $("#result").html("RIP t'as perdu");
-                $("#carte").addClass("d-none");
-                $("#passer").addClass("d-none");
-            }else if(joueur > banque){
-                $("#result").html("GG c'est win");
-                $("#carte").addClass("d-none");
-                $("#passer").addClass("d-none");
-            }
-        }else if ( joueur === 21 && banque !== 21 ){
-            $("#result").html("GG c'est win");
-            $("#carte").addClass("d-none");
-            $("#passer").addClass("d-none");
-        }else if( banque === 21){
-            $("#result").html("RIP t'as perdu");
-            $("#carte").addClass("d-none");
-            $("#passer").addClass("d-none");
-        }else if (joueur > 21){
-            $("#result").html("RIP t'as perdu");
-            $("#carte").addClass("d-none");
-            $("#passer").addClass("d-none");
-        }else if (banque > 21){
-            $("#result").html("GG c'est win");
-            $("#carte").addClass("d-none");
-            $("#passer").addClass("d-none");
-        }
     });
 })
 
