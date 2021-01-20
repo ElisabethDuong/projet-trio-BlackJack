@@ -12,39 +12,47 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row border">
-            <div class="col-6 offset-3 text-center">
-                <h2>Banque</h2>
-                <h2 id="banque"></h2>
+<header>
+    <nav class="container-fluid d-flex justify-content-center align-items-center">
+        <h1 class="text-danger">Bienvenue sur le meilleur jeu de blackJack</h1>
+    </nav>
+</header>
+    <div class="container-fluid corp">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-6 offset-3 text-center">
+                    <h2>Banque</h2>
+                    <h2 id="banque"></h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 offset-3 text-center">
+                    <h2>Joueur</h2>
+                    <h2 id="joueur"></h2>
+                    <h2 id="result"></h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-5 offset-3">
+                    <button class="" id="carte">Carte</button>
+                </div>
+                <div class="col-4">
+                    <button id="passer">Passer</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="">
+                    <button class="" id="refresh">Rejouer</button>
+                </div>
+            </div>
+            <div class="row">
+                
+                <div class="">
+                    <audio src="./asset/song/musique-ambiance.mp3" controls ></audio>
+                </div>
             </div>
         </div>
-        <div class="row border">
-            <div class="col-6 offset-3 text-center">
-                <h2>Joueur</h2>
-                <h2 id="joueur"></h2>
-                <h2 id="result"></h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-5 offset-3">
-                <button class="" id="carte">Carte</button>
-            </div>
-            <div class="col-4">
-                <button id="passer">Passer</button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="">
-                <button class="" id="refresh">Rejouer</button>
-            </div>
-        </div>
-        <div class="row">
-            
-            <div class="">
-                <audio src="./asset/song/musique-ambiance.mp3" controls ></audio>
-            </div>
-        </div>
+        
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"

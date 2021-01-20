@@ -1,3 +1,13 @@
+.corp {
+  background-color: #00394a;
+}
+
+nav {
+  background: url("/projet-trio-BlackJack/asset/img/imgs/img-casino-nav.jpg")
+    no-repeat center / cover;
+  height: 300px;
+}
+
 .row {
   height: 130px;
 }
