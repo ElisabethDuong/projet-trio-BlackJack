@@ -14,31 +14,31 @@ $(document).ready(function () {
         console.log(banque)
     }
 
-    function gg(){
+    function gg() {
         $("#result").html("GG c'est win");
         $("#carte").addClass("d-none");
         $("#passer").addClass("d-none");
     }
-    function rip(){
+    function rip() {
         $("#result").html("RIP t'as perdu");
         $("#carte").addClass("d-none");
         $("#passer").addClass("d-none");
     }
 
     function autoResult() {
-        if(joueur>21){
-           rip()
-        }else{}
+        if (joueur > 21) {
+            rip()
+        } else { }
     }
 
     function manualResult() {
-        if(banque === 21){
+        if (banque === 21) {
             rip()
-        }else if ( banque >= joueur && banque <= 21){
+        } else if (banque >= joueur && banque <= 21) {
             rip()
-        }else if(joueur < 21 && joueur > banque ){
+        } else if (joueur < 21 && joueur > banque) {
             gg()
-        }else if(banque > 21 && joueur < banque){}
+        } else if (banque > 21 && joueur < banque) { }
     }
 
     // Pour que la banque tire une nouvelle carte avec un certain délai
@@ -50,10 +50,10 @@ $(document).ready(function () {
     var click = 0;
 
     $("#carte").click(function () {
-        if (joueur === 21){
-            if (confirm("es-tu sure de vouloir reprendre une carte ??")){
-                for (var i = 0; i < 2;i++){
-                    if(click === 0){
+        if (joueur === 21) {
+            if (confirm("Es-tu sûr(e) de vouloir reprendre une carte ??")) {
+                for (var i = 0; i < 2; i++) {
+                    if (click === 0) {
                         carteBanque();
                         $("#banque").html(banque);
                         carteJoueur();
@@ -61,7 +61,7 @@ $(document).ready(function () {
                         autoResult();
                         click++;
                         return;
-                    }else if(click > 0 ){
+                    } else if (click > 0) {
                         carteJoueur();
                         $("#joueur").html(joueur);
                         autoResult();
@@ -69,12 +69,12 @@ $(document).ready(function () {
                         return;
                     }
                 }
-            }else{
+            } else {
                 return;
             }
-        }else{
-            for (var i = 0; i < 2;i++){
-                if(click === 0){
+        } else {
+            for (var i = 0; i < 2; i++) {
+                if (click === 0) {
                     carteBanque();
                     $("#banque").html(banque);
                     carteJoueur();
@@ -82,7 +82,7 @@ $(document).ready(function () {
                     autoResult();
                     click++;
                     return
-                }else if(click > 0 ){
+                } else if (click > 0) {
                     carteJoueur();
                     $("#joueur").html(joueur);
                     autoResult();
@@ -90,13 +90,13 @@ $(document).ready(function () {
                     return;
                 }
             }
-        }    
-        
+        }
+
     });
 
     $("#passer").click(function () {
         $("#banque").html(banque);
-        while(banque < 17){
+        while (banque < 17) {
             carteBanque();
             $("#banque").html(banque);
             autoResult();
