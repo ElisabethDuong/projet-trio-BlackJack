@@ -19,7 +19,7 @@ $(document).ready(function () {
         $("#carte").addClass("d-none");
         $("#passer").addClass("d-none");
     }
-    
+
     function rip() {
         $("#result").html("RIP t'as perdu");
         $("#carte").addClass("d-none");
@@ -104,6 +104,11 @@ $(document).ready(function () {
             manualResult();
         }
     });
+
+    $('#refresh').on('click', function() {
+        location.reload();
+    });
+    
 })
 
 
