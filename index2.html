@@ -32,27 +32,24 @@
                     </div>
                 </div>
                 <div class="row d-flex justify-content-around">
-                    <div class="col-6 text-center">
-                        <img src="./asset/img/9-carreau.png" alt="" />
-                        <img src="./asset/img/R-trefle.png" alt="" />
+                    <div id="visu-carte-banque" class="col-6 text-center">
                     </div>
                 </div>
                 <div class="row cartes-joueur d-flex justify-content-around">
-                    <div class="col-6 text-center">
-                        <img src="./asset/img/V-pique.png" alt="" />
-                        <img src="./asset/img/A-coeur.png" alt="" />
+                    <div id="visu-carte-joueur" class="col-6 text-center">
                     </div>
                 </div>
                 <div class="row d-flex justify-content-around">
                     <div class="col-6 text-center align-content-center">
                         <p>Joueur</p>
+                        <h2 id="result"></h2>
                     </div>
                 </div>
                 <div id="boutons" class="row">
                     <div class="d-flex justify-content-center ">
-                        <button class="btn btn-primary">Carte</button>
-                        <button class="btn btn-light">Passer</button>
-                        <button class="btn btn-warning">Nouvelle Partie</button>
+                        <button id="carte" class="btn btn-primary">Carte</button>
+                        <button id="passer" class="btn btn-light">Passer</button>
+                        <button id="refresh" class="btn btn-warning">refresh</button>
                     </div>
                 </div>
             </div>
@@ -65,14 +62,14 @@
                             <p>Banque</p>
                         </div>
                         <div class="row bg-dark text-danger">
-                            <p class="score">19</p>
+                            <p id="banque" class="score"></p>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div id="bloc-score" class="offset-4 col-4  border border-primary text-center">
                         <div class="row bg-dark text-danger">
-                            <p class="score">21</p>
+                            <p id="joueur" class="score"></p>
                         </div>
                         <div class="row">
                             <p>Joueur</p>
@@ -91,6 +88,7 @@
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
     <script src="./asset/js/main.js"></script>
+    <script src="./asset/js/random-card.js"></script>
 </body>
 
 </html>

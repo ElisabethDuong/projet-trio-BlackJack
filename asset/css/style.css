@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'digital-7';
-  src: url('../fonts/digital-7-mono-italic.ttf');
+  font-family: "digital-7";
+  src: url("../fonts/digital-7-mono-italic.ttf");
 }
 
 main {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
   font-size: 32px;
   background-color: black;
@@ -12,16 +12,16 @@ main {
 }
 
 header {
-  font-family: 'Cardo', serif;
+  font-family: "Cardo", serif;
 }
 
 .score {
-  font-family: 'digital-7', sans-serif;
+  font-family: "digital-7", sans-serif;
 }
 
 nav {
-  background: url("../img/imgs/sc_black_jack_2018_0003.jpg.jpeg")
-    no-repeat center / cover;
+  background: url("../img/imgs/sc_black_jack_2018_0003.jpg.jpeg") no-repeat
+    center / cover;
   height: 300px;
 }
 
@@ -54,11 +54,11 @@ img {
   padding: 8px;
 }
 
-.btn-light, .btn-warning {
+.btn-light,
+.btn-warning {
   margin-left: 32px;
 }
 
 p {
   padding-top: 12px;
 }
-
