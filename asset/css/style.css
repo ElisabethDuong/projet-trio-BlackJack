@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'digital-7';
+  src: url('../fonts/digital-7-mono-italic.ttf');
+}
+
 main {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
@@ -10,19 +15,15 @@ header {
   font-family: 'Cardo', serif;
 }
 
-/* .corp {
-  background-color: #00394a;
-} */
+.score {
+  font-family: 'digital-7', sans-serif;
+}
 
 nav {
   background: url("../img/imgs/sc_black_jack_2018_0003.jpg.jpeg")
     no-repeat center / cover;
   height: 300px;
 }
-
-/* .bout {
-  margin: 0 auto;
-} */
 
 .row {
   background-color: #03856b;
@@ -32,11 +33,32 @@ nav {
   padding: 50px;
 }
 
-.col-7 {
+#bloc-jeu {
   padding: 50px;
 }
 
 img {
-  height: 80px;
-  width: 64px;
+  width: 72px;
 }
+
+.cartes-joueur {
+  padding-top: 64px;
+}
+
+#boutons {
+  margin-top: 16px;
+  padding: 16px;
+}
+
+.btn {
+  padding: 8px;
+}
+
+.btn-light, .btn-warning {
+  margin-left: 32px;
+}
+
+p {
+  padding-top: 12px;
+}
+
