@@ -15,7 +15,8 @@ $(document).ready(function () {
     joueur = valeurDeLaMain(mainDuJoueur);
     console.log("joueur = " + joueur);
     console.log("main du joueur = " + mainDuJoueur);
-    visuCarteJoueur = `<img src="./asset/img/${mainDuJoueur}-pique.png" alt="" />`;
+    var i = 0;
+    visuCarteJoueur = `<img src="./asset/img/${mainDuJoueur[i]}-pique.png" alt="" />`;
     $("#visu-carte-joueur").html(visuCarteJoueur);
   }
 
