@@ -1,17 +1,42 @@
-.corp {
-  background-color: #00394a;
+main {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+  background-color: black;
+  padding: 50px 50px;
 }
 
+header {
+  font-family: 'Cardo', serif;
+}
+
+/* .corp {
+  background-color: #00394a;
+} */
+
 nav {
-  background: url("/projet-trio-BlackJack/asset/img/imgs/img-casino-nav.jpg")
+  background: url("../img/imgs/sc_black_jack_2018_0003.jpg.jpeg")
     no-repeat center / cover;
   height: 300px;
 }
 
-.bout {
+/* .bout {
   margin: 0 auto;
+} */
+
+.row {
+  background-color: #03856b;
 }
 
-/* .row {
-  height: 100px;
-} */
+.table-jeu {
+  padding: 50px;
+}
+
+.col-7 {
+  padding: 50px;
+}
+
+img {
+  height: 80px;
+  width: 64px;
+}

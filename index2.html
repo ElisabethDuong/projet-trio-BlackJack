@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black Jack SES</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@700&family=Josefin+Sans&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./asset/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -20,23 +23,24 @@
     </header>
 
     <main>
-        <div class="row ">
-            <!-- partie cartes et boutton -->
+        <div class="row table-jeu">
+            <!-- partie cartes et bouton -->
             <div class="col-7 border border-primary">
                 <div class="row d-flex justify-content-around">
                     <div class="col-6 border border-primary text-center">
-                        <p>banque</p>
+                        <p>Banque</p>
                     </div>
                 </div>
                 <div class="row d-flex justify-content-around">
                     <div class="col-6 border border-primary text-center">
-                        <p>Cartes banque</p>
+                        <img src="./asset/img/9-carreau.png" alt="" />
+                        <img src="./asset/img/R-trefle.png" alt="" />
                     </div>
                 </div>
                 <div class="row d-flex justify-content-around">
                     <div class="col-6 border border-primary text-center">
-                        <p>Cartes Joueur</p>
-                    </div>
+                        <img src="./asset/img/V-pique.png" alt="" />
+                        <img src="./asset/img/A-coeur.png" alt="" />                    </div>
                 </div>
                 <div class="row d-flex justify-content-around">
                     <div class="col-6 border border-primary text-center">
@@ -44,7 +48,13 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-12 border border-primary">
+                    <div v-else="">
+                        <button class="btn btn-primary">Carte</button>
+                        <button class="btn btn-light">Passer</button>
+                        <button class="btn btn-warning">Nouvelle Partie</button>
+                        <button class="btn btn-danger">Abandonner Partie</button>
+                    </div>
+                    <!-- <div class="col-12 border border-primary">
                         <div class="row">
                             <div class="offset-4 col-2">
                                 <button>coucou</button>
@@ -53,7 +63,7 @@
                                 <button>coucou</button>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -65,7 +75,7 @@
                             <p>Banque</p>
                         </div>
                         <div class="row">
-                            <p>score</p>
+                            <p>Score</p>
                         </div>
                     </div>
                 </div>
