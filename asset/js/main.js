@@ -6,18 +6,23 @@ $(document).ready(function () {
   var mainDuJoueur = [];
   var mainDuDealer = [];
   var click = 0;
-  var visuCarteJoueur;
-  var visuCarteBanque;
+  var visuCarteJoueur = "";
+  var visuCarteBanque = "";
 
   function carteJoueur() {
-    var randomCard = piocherCarteAuHasard(deck);
-    mainDuJoueur.push(randomCard);
+    var randomCard = piocherCarteAuHasard(deck); // A,2
+    mainDuJoueur.push(randomCard); // random => mainDuJoueur
     joueur = valeurDeLaMain(mainDuJoueur);
-    console.log("joueur = " + joueur);
-    console.log("main du joueur = " + mainDuJoueur);
-    var i = 0;
-    visuCarteJoueur = `<img src="./asset/img/${mainDuJoueur[i]}-pique.png" alt="" />`;
-    $("#visu-carte-joueur").html(visuCarteJoueur);
+    if (mainDuJoueur.length > 1) {
+      for (var i = 0; i < mainDuJoueur.length; i++) {
+        visuCarteJoueur += `<img src="./asset/img/${mainDuJoueur[i]}-pique.png" alt="" /> \n`;
+        $("#visu-carte-joueur").html(visuCarteJoueur);
+      }
+    } else {
+      visuCarteJoueur = `<img src="./asset/img/${mainDuJoueur[0]}-pique.png" alt="" /> \n`;
+      $("#visu-carte-joueur").html(visuCarteJoueur);
+    }
+    visuCarteJoueur = "";
   }
 
   function carteBanque() {
@@ -26,8 +31,16 @@ $(document).ready(function () {
     banque = valeurDeLaMain(mainDuDealer);
     console.log("dealer = " + banque);
     console.log("main du dealer = " + mainDuDealer);
-    visuCarteBanque = `<img src="./asset/img/${mainDuDealer}-pique.png" alt="" />`;
-    $("#visu-carte-banque").html(visuCarteBanque);
+    if (mainDuDealer.length > 1) {
+      for (var i = 0; i < mainDuDealer.length; i++) {
+        visuCarteBanque += `<img src="./asset/img/${mainDuDealer[i]}-pique.png" alt="" /> \n`;
+        $("#visu-carte-banque").html(visuCarteBanque);
+      }
+    } else {
+      visuCarteBanque = `<img src="./asset/img/${mainDuDealer[0]}-pique.png" alt="" /> \n`;
+      $("#visu-carte-banque").html(visuCarteBanque);
+    }
+    visuCarteBanque = "";
   }
 
   function gg() {
@@ -103,14 +116,11 @@ $(document).ready(function () {
           $("#joueur").html(joueur);
           autoResult();
           click++;
-          refresh++;
           return;
         } else if (click > 0) {
           carteJoueur();
           $("#joueur").html(joueur);
           autoResult();
-          click++;
-          refresh++;
           return;
         }
       }
