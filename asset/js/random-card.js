@@ -66,11 +66,6 @@ function piocherCarteAuHasard(deck) {
   return deck[randomIndex];
 }
 
-function startGame() {
-  mainDuJoueur = [piocherCarteAuHasard(deck), piocherCarteAuHasard(deck)];
-  mainDuDealer = [piocherCarteAuHasard(deck), piocherCarteAuHasard(deck)];
-}
-
 function valeurDeLaMain(main) {
   var sum = 0;
   for (var i = 0; i < main.length; i++) {
@@ -89,41 +84,4 @@ function valeurDeLaMain(main) {
   return sum;
 }
 
-function tirer() {
-  mainDuJoueur.push(piocherCarteAuHasard(deck));
-  document.getElementById("carte-joueur").innerHTML = mainDuJoueur;
-  document.getElementById("valeur-main-joueur").innerHTML = valeurDeLaMain(
-    mainDuJoueur
-  );
-  if (valeurDeLaMain(mainDuJoueur) > 21) {
-    console.log("perdu");
-  }
-}
-
-randomValue = Math.floor(Math.random() * (51 - 1) + 1);
-randomColors = Math.floor(Math.random() * (4 - 0) + 0);
-
 // function
-
-// console.log
-// console.log(randomColors);
-// console.log(randomValue);
-
-// carte = `<img src="./asset/img/${deck[randomValue]}-${colors[randomColors]}.png" alt="">`;
-// $(document).ready(function () {
-//   $("#np").click(function () {
-//     $("#carte-joueur").html(carte);
-//   });
-// });
-
-// startGame();
-// document.getElementById("carte-joueur").innerHTML = mainDuJoueur;
-// document.getElementById("valeur-main-joueur").innerHTML = valeurDeLaMain(
-//   mainDuJoueur
-// );
-// document.getElementById("carte-dealer").innerHTML = mainDuDealer;
-// document.getElementById("valeur-main-dealer").innerHTML = valeurDeLaMain(
-//   mainDuDealer
-// );
-
-// console.log
