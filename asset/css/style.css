@@ -1,63 +1,66 @@
 @font-face {
   font-family: "digital-7";
-  src: url("../fonts/digital-7-mono-italic.ttf");
-}
-
-main {
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
-  font-size: 32px;
-  background-color: black;
-  padding: 50px 50px;
+  src: url("./fonts/digital-7-mono-italic.ttf");
 }
 
 header {
-  font-family: "Cardo", serif;
-}
-
-.score {
-  font-family: "digital-7", sans-serif;
+  margin: 0 auto;
+  height: 200px;
+  width: 100%;
+  background: url("../img/backjack-bg-1.jpg") no-repeat center / cover;
 }
 
 nav {
-  background: url("../img/imgs/sc_black_jack_2018_0003.jpg") no-repeat center / cover;
-  height: 300px;
+  color: white;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.774);
 }
 
-.row {
-  background-color: #03856b;
+main {
+  margin: 0 auto;
+  padding: 5% 10%;
+  height: 77vh;
+  width: 100%;
+  background-color: #085022;
+  gap: 5%;
 }
 
-.table-jeu {
-  padding: 50px;
-}
-
-#bloc-jeu {
-  padding: 50px;
+.jeu {
+  color: white;
+  background: url("../img/fond-table-poker-couleur-verte_47243-1068.jpg")
+    no-repeat center / cover;
+  height: 100%;
+  width: 80%;
 }
 
 img {
-  width: 72px;
+  width: 80px;
 }
 
-.cartes-joueur {
-  padding-top: 64px;
+.cote {
+  margin: 20px auto;
 }
 
-#boutons {
-  margin-top: 16px;
-  padding: 16px;
+.resolt {
+  color: rgb(133, 12, 12);
 }
 
-.btn {
-  padding: 8px;
+.scoree {
+  color: white;
+  padding: 80px 20px;
 }
 
-.btn-light,
-.btn-warning {
-  margin-left: 32px;
+.chiffre {
+  font-size: 30px;
+  width: 110px;
+  height: 40px;
+  color: red;
+  font-family: "digital-7", sans-serif;
+  background: black;
 }
 
-p {
-  padding-top: 12px;
+.boutons {
+  margin-top: -60px;
+  padding: 20px;
+  height: 100px;
 }

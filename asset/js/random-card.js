@@ -66,6 +66,11 @@ function piocherCarteAuHasard(deck) {
   return deck[randomIndex];
 }
 
+function piocherCouleurAuHasard(colors) {
+  var colorIndex = Math.floor(colors.length * Math.random());
+  return colors[colorIndex];
+}
+
 function valeurDeLaMain(main) {
   var sum = 0;
   for (var i = 0; i < main.length; i++) {

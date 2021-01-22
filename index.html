@@ -1,64 +1,89 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black Jack SES</title>
     <link rel="stylesheet" href="./asset/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@700&family=Josefin+Sans&display=swap"
+        rel="stylesheet">
     <script src="./asset/jquery/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
 </head>
-
 <body>
+
     <header>
-        <nav class="container-fluid d-flex justify-content-center align-items-center">
-            <h1 class="text-danger">Bienvenue sur le meilleur jeu de blackJack</h1>
+        <nav class="text-center p-5">
+            <h1>Bienvenue sur notre BlackJack</h1>
         </nav>
     </header>
-    <div class="container-fluid corp">
-        <div class="col-12">
-            <div class="row">
-                <div class="col-6 offset-3 text-center">
-                    <h2>Banque</h2>
-                    <h2 id="banque"></h2>
+
+    <main class="table-jeu d-flex justify-content-between">
+        <div class="jeu d-flex flex-column justify-content-between">
+            <div id="bloc-jeu" class=" d-flex flex-column justify-content-between">
+                <!-- partie dealer -->
+                <div class="cote">
+                    <div class="text-center mb-5">
+                        <h2>Dealer</h2>
+                    </div>
+                    <div id="visu-carte-banque">
+
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-6 offset-3 text-center">
-                    <h2>Joueur</h2>
-                    <h2 id="joueur"></h2>
+                <!-- partie dealer -->
+                
+                <div class="text-center resolt">
                     <h2 id="result"></h2>
                 </div>
+    
+                <!-- partie Joueur -->
+                <div class="cote">
+                    <div id="visu-carte-joueur">
+                    </div>
+                    <div class="text-center mt-5">
+                        <h2>Joueur</h2>
+                    </div>
+                </div>
+                <!-- partie joueur -->
             </div>
-            <div class="row">
-                <div class="col-5 offset-3">
-                    <button class="" id="carte">Carte</button>
-                </div>
-                <div class="col-4">
-                    <button id="passer">Passer</button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="">
-                    <button class="" id="refresh" >Rejouer</button>
-                </div>
-            </div>
-            <div class="row">
-
-                <div class="">
-                    <audio src="./asset/song/musique-ambiance.mp3" controls></audio>
-                </div>
+            <div id="boutons" class="text-center">
+                <button id="carte" class="btn btn-primary">Carte</button>
+                <button id="passer" class="btn btn-light">Passer</button>
+                <button id="refresh" class="btn btn-warning">Nouvelle partie</button>
             </div>
         </div>
 
-    </div>
+            <!-- SCORE -->
+        <div class="scoree d-flex flex-column justify-content-between">
+            <!-- points dealer -->
+            <div id="bloc-score" class="text-center">
+                <h2>Dealer</h2>
+                <div class="chiffre">
+                    <p id="banque" class="score"></p>
+                </div>
+            </div>
+            <!-- points dealer -->
+
+            <!-- points Joueur -->
+            <div id="bloc-score" class="text-center">
+                <div class="chiffre">
+                    <p id="joueur" class="score"></p>
+                </div>
+                <h2>Joueur</h2>
+            </div>
+            <!-- points Joueur -->
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
-        <script src="./asset/js/random-card.js"></script>
     <script src="./asset/js/main.js"></script>
+    <script src="./asset/js/random-card.js"></script>
 </body>
-
 </html>

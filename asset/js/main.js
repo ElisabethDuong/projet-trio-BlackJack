@@ -1,7 +1,5 @@
 $(document).ready(function () {
   var joueur = 0;
-  var min = 1;
-  var max = 10;
   var banque = 0;
   var mainDuJoueur = [];
   var mainDuDealer = [];
@@ -10,16 +8,18 @@ $(document).ready(function () {
   var visuCarteBanque = "";
 
   function carteJoueur() {
-    var randomCard = piocherCarteAuHasard(deck); // A,2
-    mainDuJoueur.push(randomCard); // random => mainDuJoueur
+    var randomCard = piocherCarteAuHasard(deck);
+    mainDuJoueur.push(randomCard);
     joueur = valeurDeLaMain(mainDuJoueur);
     if (mainDuJoueur.length > 1) {
       for (var i = 0; i < mainDuJoueur.length; i++) {
-        visuCarteJoueur += `<img src="./asset/img/${mainDuJoueur[i]}-pique.png" alt="" /> \n`;
+        var randomColor = piocherCouleurAuHasard(colors);
+        visuCarteJoueur += `<img src="./asset/img/${mainDuJoueur[i]}-${randomColor}.png" alt="" /> \n`;
         $("#visu-carte-joueur").html(visuCarteJoueur);
       }
     } else {
-      visuCarteJoueur = `<img src="./asset/img/${mainDuJoueur[0]}-pique.png" alt="" /> \n`;
+      var randomColor = piocherCouleurAuHasard(colors);
+      visuCarteJoueur = `<img src="./asset/img/${mainDuJoueur[0]}-${randomColor}.png" alt="" /> \n`;
       $("#visu-carte-joueur").html(visuCarteJoueur);
     }
     visuCarteJoueur = "";
